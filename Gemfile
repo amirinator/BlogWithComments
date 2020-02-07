@@ -69,7 +69,6 @@ end
 ###
 # NOTE: Below are custom gems for this project
 ###
-
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
