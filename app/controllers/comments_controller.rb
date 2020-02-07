@@ -1,5 +1,7 @@
-class CommentsController < ApplicationController
+# frozen_string_literal: true
 
+# Controller for managing Comments in the application
+class CommentsController < ApplicationController
   # GET /comments/new
   def new
     @comment = Comment.new(post_id: params[:post_id])
@@ -20,8 +22,9 @@ class CommentsController < ApplicationController
   end
 
   private
-    # Only allow a trusted parameter "white list" through.
-    def comment_params
-      params.require(:comment).permit(:body, :post_id, :user_id)
-    end
+
+  # Only allow a trusted parameter "white list" through.
+  def comment_params
+    params.require(:comment).permit(:body, :post_id, :user_id)
+  end
 end
