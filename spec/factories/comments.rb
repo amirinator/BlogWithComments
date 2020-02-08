@@ -6,6 +6,6 @@ FactoryBot.define do
   factory :comment do |f|
     association :user, factory: :user
     association :post, factory: :post
-    f.body { Faker::String.random }
+    f.body { Faker::Alphanumeric.alpha }
   end
 end
